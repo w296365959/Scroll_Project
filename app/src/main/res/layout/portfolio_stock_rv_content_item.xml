@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp">
+    <TextView
+        android:id="@+id/content_name_tv"
+        android:text="内容"
+        android:layout_width="90dp"
+        android:layout_height="45dp"/>
+
+    <com.example.administrator.scrolltest.InterceptScrollLinerLayout
+        android:id="@+id/content_right_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false">
+
+        <com.example.administrator.scrolltest.SyncHScrollView
+            android:id="@+id/hsv_rv_content_right"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:focusable="false"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <include layout="@layout/portfolio_stock_rv_content_right_layout"/>
+
+        </com.example.administrator.scrolltest.SyncHScrollView>
+
+    </com.example.administrator.scrolltest.InterceptScrollLinerLayout>
+</LinearLayout>
